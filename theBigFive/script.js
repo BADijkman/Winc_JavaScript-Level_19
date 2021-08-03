@@ -35,8 +35,9 @@ const removeAll = () => {
   let array = document.getElementsByClassName("spotted-animals-list-item");
   array = Array.from(array);
   const destination = document.getElementById("spotted-animals-list");
-  for (i = 0; i < array.length; i++) {
-    const child = destination.getElementsByTagName("li")[0];
+
+  array.forEach((item) => {
+    const child = document.getElementsByClassName("spotted-animals-list-item")[0];
     let removedItem = destination.removeChild(child);
-  }
+  });
 };
